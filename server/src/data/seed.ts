@@ -42,7 +42,7 @@ const products = [
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781693406/XX99_MarkII_Man_2_p85lxq.png",
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781693404/XX99_MARKII_Man3_otsdib.png",
     ],
-    isNew: true,
+    isNewArrival: true,
   },
 
   // Product 2
@@ -68,7 +68,7 @@ const products = [
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781694728/XX99_MARKI_MAN2_pizgvi.png",
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781694737/XX99_MARKI_MAN3_za7dqd.png",
     ],
-    isNew: false,
+    isNewArrival: false,
   },
 
   // Product 3
@@ -93,7 +93,7 @@ const products = [
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781695511/XX59_MAN2_pr8et6.png",
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781695987/XX59_MAN_3_b29uf2.png",
     ],
-    isNew: false,
+    isNewArrival: false,
   },
   // Product 4
   {
@@ -118,7 +118,7 @@ const products = [
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781696409/ZX9_MAN_2_gn835p.png",
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781696409/ZX9_MAN3_a744gl.png",
     ],
-    isNew: true,
+    isNewArrival: true,
   },
 
   // Product 5
@@ -145,7 +145,7 @@ const products = [
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781697014/ZX7_MAN2_d0drqx.png",
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781697014/ZX7_MAN3_epyo6l.png",
     ],
-    isNew: false,
+    isNewArrival: false,
   },
 
   // product 6
@@ -172,7 +172,7 @@ const products = [
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781697517/YX1_MAN2_kzrue6.png",
       "https://res.cloudinary.com/dbej9cnnv/image/upload/q_auto/f_auto/v1781697518/YX1_MAN3_lqzykc.png",
     ],
-    isNew: true,
+    isNewArrival: true,
   },
 ];
 
