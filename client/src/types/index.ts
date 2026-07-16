@@ -2,7 +2,7 @@
 
 // ---- Product --------
 export interface Product {
-  id: string;
+  _id: string;
   name: string;
   category: "headphones" | "speakers" | "earphones";
   price: number;
@@ -14,7 +14,6 @@ export interface Product {
   isNew: boolean;
   createdAt: string;
 }
-
 
 // One item included in the product box
 export interface BoxItem {
@@ -33,13 +32,13 @@ export interface CartTotals {
   subtotal: number;
   shipping: number;
   vat: number;
-  grandtotal: number;
-} 
+  grandTotal: number;
+}
 
 // ----- Users ---------
 // The user object stored in our AuthContext
 export interface User {
-  id: string;
+  _id: string;
   name: string;
   email: string;
   isAdmin: boolean;
@@ -52,51 +51,52 @@ export interface User {
 // ----- Order ---------
 // Billing/shipping info from checkout form
 export interface CustomerInfo {
-    name: string;
-    email: string;
-    phone: string;
-    address: string;
-    zipcode: string;
-    city: string;
-    country: string;
-    paymentMethod: "e-Money" | "Cash on Delivery";
-    eMoneyNumber?: string;
-    eMoneyPIN?: string;
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  zipCode: string;
+  city: string;
+  country: string;
+  paymentMethod: "e-Money" | "Cash on Delivery";
+  eMoneyNumber?: string;
+  eMoneyPIN?: string;
 }
 
 // An item inside a placed order
 export interface Orderitem {
-    productId: string;
-    name: string;
-    price: number;
-    quantity: number;
-    image: string;
+  productId: string;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
 }
 
 // The full order Object returned from the API
 export interface Order {
-    id: string;
-    orderId: string;
-    userId: string;
-    customerInfo: CustomerInfo;
-    cartItems: Orderitem[];
-    orderSummary: CartTotals;
-    status: "pending" | "processing" | "shipped" | "delivered" | "cancelled";
+  [x: string]: string | number | Date;
+  _id: string;
+  orderId: string;
+  userId: string;
+  customerInfo: CustomerInfo;
+  cartItems: Orderitem[];
+  orderSummary: CartTotals;
+  status: "pending" | "processing" | "shipped" | "delivered" | "cancelled";
 }
 
 // ----- Checkout Form ---------
 // form fields for the checkout page
 export interface CheckoutFormData {
-    name: string;
-    email: string;
-    phone: string;
-    address: string;
-    zipcode: string;
-    city: string;
-    country: string;
-    paymentMethod: "e-Money" | "Cash on Delivery";
-    eMoneyNumber?: string;
-    eMoneyPIN?: string;
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  zipCode: string;
+  city: string;
+  country: string;
+  paymentMethod: "e-Money" | "Cash on Delivery";
+  eMoneyNumber: string;
+  eMoneyPIN: string;
 }
 
 // form validation errors - same keys as the form, but values are error strings
@@ -105,14 +105,14 @@ export type FormErrors = Partial<Record<keyof CheckoutFormData, string>>;
 // -----Admin Dashboard Stats ---------
 
 export interface DashboardStats {
-    totalOrders: number;
-    totalUsers: number;
-    totalRevenue: number;
-    pendingOrders: number;
-    recentOrders: Order[];
-    monthlyRevenue: {
-       _id: {year: number; month: number};
-       revenue: number;
-       count: number;
-    }[];
+  totalOrders: number;
+  totalUsers: number;
+  totalRevenue: number;
+  pendingOrders: number;
+  recentOrders: Order[];
+  monthlyRevenue: {
+    _id: { year: number; month: number };
+    revenue: number;
+    count: number;
+  }[];
 }
