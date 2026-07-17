@@ -158,7 +158,9 @@ const AdminOrders: React.FC = () => {
                         Date
                       </p>
                       <p className="font-bold text-sm text-black">
-                        {new Date(order.createdAt).toLocaleDateString()}
+                        {new Date(
+                          (order as any).createdAt || (order as any).created_at || Date.now()
+                        ).toLocaleDateString()}
                       </p>
                     </div>
                     <div>

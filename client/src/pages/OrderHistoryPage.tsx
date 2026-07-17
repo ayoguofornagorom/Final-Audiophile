@@ -94,7 +94,7 @@ const OrderHistoryPage: React.FC = () => {
                       Date
                     </p>
                     <p className="font-bold text-sm text-black">
-                      {new Date(order.createdAt).toLocaleDateString("en-US", {
+                      {new Date((order as any).createdAt).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",

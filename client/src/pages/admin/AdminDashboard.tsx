@@ -288,7 +288,12 @@ const AdminDashboard: React.FC = () => {
                       </span>
                     </td>
                     <td className="px-6 py-4 text-sm text-black/50">
-                      {new Date(order.createdAt).toLocaleDateString()}
+                      {new Date(
+                        // handle different possible timestamp property names on Order
+                        (order as any).createdAt ??
+                          (order as any).created_at ??
+                          Date.now(),
+                      ).toLocaleDateString()}
                     </td>
                   </tr>
                 ))
