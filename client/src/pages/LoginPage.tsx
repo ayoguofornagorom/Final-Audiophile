@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FiUser, FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
+import { FiMail, FiEye, FiEyeOff } from "react-icons/fi";
 
 const authIMG =
   "https://res.cloudinary.com/drdr9gib1/image/upload/v1782738722/181_frame_hht6ym.png";

@@ -74,7 +74,6 @@ export interface Orderitem {
 
 // The full order Object returned from the API
 export interface Order {
-  [x: string]: string | number | Date;
   _id: string;
   orderId: string;
   userId: string;
